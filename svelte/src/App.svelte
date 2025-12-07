@@ -1,11 +1,1 @@
-<script>
-   
-</script>
-
-<main>
-  <h1> BREMS </h1>
-</main>
-
-<style>
-  
-</style>
+<h1>SVELTE + Laravel API Integration for BIAM Recruitment Exam Management System</h1>
