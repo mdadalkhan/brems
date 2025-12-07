@@ -1,5 +1,5 @@
-BREMS - BIAM Recruitment Exam Management System v1.0
-04/12/2025 (DD/MM/YYYY) GMT +06:00
+BREMS - BIAM Recruitment Exam Management System V1.0
+Started: 04/12/2025 (DD/MM/YYYY) GMT +06:00
 ----------------------------------------------------
 01. PHP 8.2 NTS
 02. Composer 2.9
@@ -11,3 +11,68 @@ Installation Instruction
 01. composer require laravel/laravel brems
 02. comopser require laravel/sanctum
 03. npm create vite@latest >> svelte
+------------------------------------------------------------------------------------------------------------------
+Design concept & Features
+Types of Users: 
+  a. Users
+  b. Admin (3rd Parties)
+  c. System Admin
+------------------------------------------------------------------------------------------------------------------
+Bootup the App
+01. Check expired Admin account >> disabled if validity expired
+02. 
+
+------------------------------------------------------------------------------------------------------------------
+Data Model
+01. brems_users    (stores users activities and result)
+02. brems_sysadmin (table for system admin)
+03. brems_
+------------------------------------------------------------------------------------------------------------------
+Data Processors
+
+------------------------------------------------------------------------------------------------------------------
+a. User (Flowchart: 1. User.drawio)
+    1. Authentication
+       if   (Authentication == OK) >> Middlewares (CORS, RateLimit, JWT, Input Sanitization) << >> Dashboard (Options: Submit Report and Logout)
+       else login window.
+    1.1 Take Test (Show instruction) - Timer included
+        - Given Text
+        - Text To Type
+        - Start Type (Start Count down Timer if time < 60s popup windows appears as warning)
+        - Submit -> User Redirect to Congratulation Page along with logout button
+        - Send Typed text to TypeAnalyzer >> Prepare Result >> Save on brems_users
+------------------------------------------------------------------------------------------------------------------
+b. Admin (3rd Parties) (Flowchart 2. Admin.drawio)
+   1.  Login (Email/Phone or Password) - Collect authentication info from System admin. account should have validity.
+   1.1 Authentication
+       if(Authentication == OK && user is not blocked) >>  Middlewares (CORS, RateLimit, JWT, Input Sanitization) >> Dashboard
+
+   1.2 Dashboard
+     1.2.1 Logout >> Logout from current Session.
+     1.2.2 Create Test() 
+           - Title: (Set Exam title)
+           - Institution: (Use Keyword Only)
+           - Has Group (If groups are created 
+           - Exam Code: (6 Digit 
+           - Capacity: (Number of examinee)
+           - Input Text Bangla,  Time Limit, Set Accuracy (%)
+           - Input Text English, Time Limit, Set Accuracy (%)
+           - Import Roll (a csv file containing roll numbers)
+           - Save()
+
+    1.2.3 View Test() - 
+           - No Tests are shown if tests are not created
+           - List of Exam shown in a table along with following action(Activate Test, Deactivate (if activate), Delete Test (All action required passowrd for confirmation)   
+    1.2.4 Report()
+           - Generate Report as PDF (
+           - View Test statistics (Number of passed, failed etc)     
+-------------------------------------------------------------------------------------------------------------------
+c. System Admin (Super Users) - Ensure maximum security
+   1. Login (email, passowrd, 2fa)
+   1.1 if (Authentication == OK) >> middlewares (CORS, RateLimit, JWT, Logging, Input Sanitization) >> Dashboard
+       else destroy session
+
+   1.2 Dashboard
+     1. Create Users (Create users for test management)
+     2. Block  Users (Block users )  
+     3. 
