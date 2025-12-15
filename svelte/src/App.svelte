@@ -1,1 +1,7 @@
-<h1>SVELTE + Laravel API Integration for BIAM Recruitment Exam Management System</h1>
+<script>
+  import Router from "svelte-spa-router";
+  import routes from "./routes.js";
+</script>
+
+<Router {routes} />
+

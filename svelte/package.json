@@ -10,7 +10,15 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
     "svelte": "^5.43.8",
+    "tailwindcss": "^4.1.18",
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "svelte-spa-router": "^4.0.1",
+    "typeface-lato": "^1.1.13"
   }
 }

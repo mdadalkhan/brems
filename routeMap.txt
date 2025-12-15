@@ -1,0 +1,11 @@
+Frontedn                       Backend
+-----------------------------------------
+/login                         /signup
+/logout                        /signout
+/users	                       /usrers
+/users{id}                     /users{id}
+
+/admin                         /admin
+
+
+/sysadmin                      /sysadmin
