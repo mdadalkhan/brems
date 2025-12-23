@@ -1,15 +1,16 @@
 <script lang="ts">
-  import Clock from "../components/Clock.svelte"
+  import Clock from "./components/Clock.svelte"
+  import Logo  from "./public/biam.svg"
 
   function handleSubmit() {
      alert("Form submitted");
   }
 </script>
 
-<div class="min-h-screen md:flex md:items-center justify-center bg-gray-100" style="font-family: Rubik;">
+<div class="min-h-screen md:flex md:items-center justify-center bg-gray-100" style="font-family: Segoe UI Semibold;">
   <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-xl">
     <div class="flex items-center space-x-4 mb-8">
-      <img class="w-16 h-16" src="build/biam.svg" alt="App logo" />
+      <img class="w-16 h-16" src={Logo} alt="App logo" />
       <div>
         <p class="text-xl font-bold">Recruitment Exam Management System</p>
         <p class="text-gray-500 text-md">BIAM Foundation, Dhaka</p> <Clock />

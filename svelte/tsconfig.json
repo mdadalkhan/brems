@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler", // Add this
+    "allowImportingTsExtensions": true, // Add this
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": false
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.svelte", "src/**/*.svelte.ts"]
+}
