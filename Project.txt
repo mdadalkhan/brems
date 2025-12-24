@@ -9,24 +9,22 @@ Started: 04/12/2025 (DD/MM/YYYY) GMT +06:00
 Installation Instruction
 @author <mdadalkhan@gmail.com> 01799729507
 01. composer require laravel/laravel brems
-02. comopser require laravel/sanctum
+02. comopser require laravel/inertia
 03. npm create vite@latest >> svelte
 ------------------------------------------------------------------------------------------------------------------
 Design concept & Features
 Types of Users: 
   a. Users
-  b. Admin (3rd Parties)
-  c. System Admin
+  b. Admin
 ------------------------------------------------------------------------------------------------------------------
 Bootup the App
 01. Check expired Admin account >> disabled if validity expired
 02. 
 
 ------------------------------------------------------------------------------------------------------------------
-Data Model
-01. brems_users    (stores users activities and result)
-02. brems_sysadmin (table for system admin)
-03. brems_
+Data Models & Relationships
+01. brems_users    (stores users activities and result) - see database/migration for more info
+02. brems_result   (store users result) 
 ------------------------------------------------------------------------------------------------------------------
 Data Processors
 

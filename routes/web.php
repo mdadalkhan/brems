@@ -3,6 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function() {
-  return Inertia::render('welcome'); // Must return as Inertia::render()
+/* ----------------------------------- Admin ----------------------------------------------------------- */
+Route::get('/admin', function () {
+    return Inertia::render('admin/welcome');
 });
+/*-------------------------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------- Users ----------------------------------------------------*/
+Route::get('/', function () {
+    return Inertia::render('welcome');
+});
+/*-------------------------------------------------------------------------------------------------------*/
+

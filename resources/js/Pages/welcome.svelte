@@ -1,12 +1,10 @@
 <script lang="ts">
-  import Clock from "./components/Clock.svelte"
-  import Logo  from "./public/biam.svg"
-
-  function handleSubmit() {
-     alert("Form submitted");
-  }
+  import Clock        from "./components/Clock.svelte"
+  import Logo         from "./public/biam.svg"
 </script>
-
+<svelte:head>
+   <title>BIAM BREMS &copy 2025 </title>
+</svelte:head>
 <div class="min-h-screen md:flex md:items-center justify-center bg-gray-100" style="font-family: Segoe UI Semibold;">
   <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-xl">
     <div class="flex items-center space-x-4 mb-8">
@@ -14,11 +12,10 @@
       <div>
         <p class="text-xl font-bold">Recruitment Exam Management System</p>
         <p class="text-gray-500 text-md">BIAM Foundation, Dhaka</p> <Clock />
-        
       </div>
     </div>
     <!-- App root input Form -->
-    <form on:submit|preventDefault={handleSubmit}>
+    <form>
        <div class="space-y-4 mb-6 sm:px-2 lg:px-10">
       <!-- Phone number input with phone icon -->
       <div class="relative">
